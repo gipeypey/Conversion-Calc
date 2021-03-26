@@ -140,7 +140,7 @@ do
     
     else
         clear
-        echo "!!Invalid!!"
+        echo "!!!Invalid!!!!!!!!"
         sleep 2
         echo " "
         echo "Continue? (y/n)"
