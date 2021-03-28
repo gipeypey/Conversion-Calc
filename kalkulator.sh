@@ -11,6 +11,8 @@ loop=y
 while [ $loop == y ]
 do
     clear
+    input
+    
     echo KALKULATOR:
     echo 1. PENJUMLAHAN
     echo 2. PENGURANGAN
@@ -22,22 +24,18 @@ do
 
     if (($a == 1))
     then
-        input
         echo Jumlah penjumlahan $bil1 dengan $bil2 = $[bil1+bil2]
 
     elif (($a == 2 ))
     then
-        input
         echo Jumlah pengurangan $bil1 dengan $bil2 = $[bil1-bil2]
 
     elif (($a == 3 ))
     then
-        input
         echo Jumlah perkalian $bil1 dengan $bil2 = $[bil1*bil2]
 
     elif (($a == 4 ))
     then
-        input
         echo Jumlah pembagian $bil1 dengan $bil2 = $[bil1/bil2]
 
     else
