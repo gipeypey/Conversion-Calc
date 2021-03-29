@@ -74,19 +74,19 @@ do
                 echo "$c_to_f C = $[$[$c_to_f * 9]/5+32] F"
                 
                 
-                #-------------TO KELVIN-------------#
+            #-------------TO KELVIN-------------#
             elif [ "$celcius" = 2 ]
             then
                 clear
                 read -p "C = " c_to_k
                 echo "$c_to_k C = $[$[$c_to_k + 273]] K"
                 
-                #-------------BACK (ERROR)-------------#
+            #-------------BACK (ERROR)-------------#
             elif [ "$celcius" = 3 ]
             then
                 reload
                 
-                #-------------NO OPTION (MENU CELCIUS)-------------#
+            #-------------NO OPTION (MENU CELCIUS)-------------#
             else
                 clear
                 echo "!!Invalid!!"
@@ -94,7 +94,7 @@ do
                 
             fi
             
-            #-------------FAHRENHEIT-------------#
+        #-------------FAHRENHEIT-------------#
         elif [ "$temperature" = 2 ]
         then
             clear
@@ -107,19 +107,19 @@ do
                 read -p "F = " f_to_c
                 echo "$f_to_c F = $[$[$f_to_c - 32]*5/9] C"
                 
-                #-------------TO KELVIN------------#
+            #-------------TO KELVIN------------#
             elif [ "$fahrenheit" = 2 ]
             then
                 clear
                 read -p "F = " f_to_k
                 echo "$f_to_k F = $[$[$f_to_k - 32]*5/9+273] K"
                 
-                #-------------BACK (ERROR)-------------#
+            #-------------BACK (ERROR)-------------#
             elif [ "$fahrenheit" = 3 ]
             then
                 reload
                 
-                #-------------NO OPTION (MENU FAHRENHEIT)-------------#
+            #-------------NO OPTION (MENU FAHRENHEIT)-------------#
             else
                 clear
                 echo "!!Invalid!!"
@@ -127,7 +127,7 @@ do
                 
             fi
             
-            #-------------KELVIN-------------#
+        #-------------KELVIN-------------#
         elif [ "$temperature" = 3 ]
         then
             clear
@@ -140,19 +140,19 @@ do
                 read -p "K = " k_to_c
                 echo "$k_to_c K = $[$[$k_to_c - 273]] C"
                 
-                #-------------TO FAHRENHEIT------------#
+            #-------------TO FAHRENHEIT------------#
             elif [ "$kelvin" = 2 ]
             then
                 clear
                 read -p "K = " k_to_f
                 echo "$k_to_f K = $[$[$k_to_f - 273]*9/5+32] F"
                 
-                #-------------BACK (ERROR)-------------#
+            #-------------BACK (ERROR)-------------#
             elif [ "$kelvin" = 3 ]
             then
                 reload
                 
-                #-------------NO OPTION (MENU KELVIN)-------------#
+            #-------------NO OPTION (MENU KELVIN)-------------#
             else
                 clear
                 echo "!!Invalid!!"
@@ -160,12 +160,12 @@ do
                 
             fi
             
-            #-------------BACK (ERROR)-------------#
+        #-------------BACK (ERROR)-------------#
         elif [ "$temprature" = 4 ]
         then
             x=0
             
-            #-------------NO OPTION (MENU TEMPRATURE CONVERSION)-------------#
+        #-------------NO OPTION (MENU TEMPRATURE CONVERSION)-------------#
         else
             clear
             echo "!!Invalid!!"
@@ -193,14 +193,15 @@ do
                 sleep 2
             ;;
         esac
-        
+
+    #-------------EXIT-------------#
     elif [ "$pilih" = 7 ]
     then
         clear
         echo "Thanks!"
         exit
         
-        #-------------NO OPTION (MAIN MENU)-------------#
+    #-------------NO OPTION (MAIN MENU)-------------#
     else
         clear
         echo "!!Invalid!!"
