@@ -15,13 +15,13 @@ menu (){
     read -p "Input (1-7): " pilih
 }
 
-menu_temprature (){
+menu_temperature (){
     echo "--TEMPRATURE CONVERSION--"
     echo "1. Celcius"
     echo "2. Fahrenheit"
     echo "3. Kelvin"
     echo "4. Back"
-    read -p "Input (1-4):" temprature
+    read -p "Input (1-4):" temperature
 }
 
 menu_celcius (){
@@ -58,10 +58,10 @@ do
     if [ "$pilih" = 1 ]
     then
         clear
-        menu_temprature
+        menu_temperature
         
         #-------------CELCIUS-------------#
-        if [ "$temprature" = 1 ]
+        if [ "$temperature" = 1 ]
         then
             clear
             menu_celcius
@@ -95,7 +95,7 @@ do
             fi
             
             #-------------FAHRENHEIT-------------#
-        elif [ "$temprature" = 2 ]
+        elif [ "$temperature" = 2 ]
         then
             clear
             menu_fahrenheit
@@ -128,7 +128,7 @@ do
             fi
             
             #-------------KELVIN-------------#
-        elif [ "$temprature" = 3 ]
+        elif [ "$temperature" = 3 ]
         then
             clear
             menu_kelvin
