@@ -237,7 +237,7 @@ do
         #-------------PENJUMLAHAN-------------#
         if [ "$calc" = 1 ]
         then
-            echo "Jumlah penjumlahan $bil1 dengan $bil2 = $[bil1+bil2]"
+            echo "Jumlah penjumlahan2 $bil1 dengan $bil2 = $[bil1+bil2]"
 
         #-------------PENGURANGAN-------------#
         elif [ "$calc" = 2 ]
