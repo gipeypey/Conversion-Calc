@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#-------------FUNCTION MENU-------------#
+#-------------MAIN MENU-------------#
 menu (){
     echo "--CONVERSION CALCULATOR--"
     echo "--Choose what you need!--"
@@ -15,13 +15,14 @@ menu (){
     read -p "Input (1-7): " pilih
 }
 
+#-------------TEMPERATURE MENU-------------#
 menu_temperature (){
     echo "--TEMPRATURE CONVERSION--"
     echo "1. Celcius"
     echo "2. Fahrenheit"
     echo "3. Kelvin"
     echo "4. Back"
-    read -p "Input (1-4):" temperature
+    read -p "Input (1-4): " temperature
 }
 
 menu_celcius (){
@@ -29,7 +30,7 @@ menu_celcius (){
     echo "1. To Fahrenheit"
     echo "2. To Kelvin"
     echo "3. Back"
-    read -p "Input (1-3):" celcius
+    read -p "Input (1-3): " celcius
 }
 
 menu_fahrenheit(){
@@ -37,7 +38,7 @@ menu_fahrenheit(){
     echo "1. To Celcius"
     echo "2. To Kelvin"
     echo "3. Back"
-    read -p "Input (1-3):" fahrenheit
+    read -p "Input (1-3): " fahrenheit
 }
 
 menu_kelvin (){
@@ -45,12 +46,39 @@ menu_kelvin (){
     echo "1. To Celcius"
     echo "2. To Fahrenheit"
     echo "3. Back"
-    read -p "Input (1-3):" kelvin
+    read -p "Input (1-3): " kelvin
 }
+
+#-------------VOLUME MENU-------------#
+
+
+#-------------LENGTH MENU-------------#
+
+
+#-------------TIME MENU-------------#
+
+
+#-------------CALCULATOR MENU-------------#
+menu_num(){
+    read -p "Input num1 = " bil1
+    read -p "Input num2 = " bil2
+}
+
+menu_calculator (){
+    echo "--CALCULATOR--"
+    echo "1. PENJUMLAHAN"
+    echo "2. PENGURANGAN"
+    echo "3. PERKALIAN"
+    echo "4. PEMBAGIAN"
+    echo "5. Exit"
+    read -p "Input (1-5): " calc
+}
+
 
 x=0
 while [ $x = 0 ]
 do
+    #-------------MAIN MENU-------------#
     clear
     menu
     
@@ -72,7 +100,6 @@ do
                 clear
                 read -p "C = " c_to_f
                 echo "$c_to_f C = $[$[$c_to_f * 9]/5+32] F"
-                
                 
             #-------------TO KELVIN-------------#
             elif [ "$celcius" = 2 ]
@@ -174,7 +201,7 @@ do
         fi
         
         echo " "
-        echo "Continue? (y/n) 1"
+        echo "Continue? (y/n) temperature"
         read answer
         
         case "$answer" in
@@ -193,6 +220,73 @@ do
                 sleep 2
             ;;
         esac
+    #-------------END OF TEMPERATURE-------------#
+
+
+    #-------------CALCULATOR-------------#
+    elif [ "$pilih" = 6 ]
+    then
+        #-------------MENU_NUM-------------#
+        clear
+        menu_num
+
+        #-------------MENU_CALCULATOR------------#
+        echo " "
+        menu_calculator
+
+        #-------------PENJUMLAHAN-------------#
+        if [ "$calc" = 1 ]
+        then
+            echo "Jumlah penjumlahan $bil1 dengan $bil2 = $[bil1+bil2]"
+
+        #-------------PENGURANGAN-------------#
+        elif [ "$calc" = 2 ]
+        then
+            echo "Jumlah pengurangan $bil1 dengan $bil2 = $[bil1-bil2]"
+
+        #-------------PERKALIAN-------------#
+        elif [ "$calc" = 3 ]
+        then
+            echo "Jumlah perkalian $bil1 dengan $bil2 = $[bil1*bil2]"
+
+        #-------------PEMBAGIAN-------------#
+        elif [ "$calc" = 4 ]
+        then
+            echo "Jumlah pembagian $bil1 dengan $bil2 = $[bil1/bil2]"
+
+        #-------------BACK (ERROR)-------------#
+        elif [ "$calc" = 5 ]
+        then
+            x=0
+
+        else
+            clear
+            echo "!!Invalid!!"
+            sleep 2
+
+        fi
+
+    echo " "
+    echo "Continue? (y/n) calc"
+    read answer
+        
+    case "$answer" in
+        y)
+            echo "yes"
+            x=0
+            ;;
+        n)
+            clear
+            echo "Thanks!"
+            exit
+            ;;
+        *)
+            clear
+            echo "!!Invalid!!"
+            sleep 2
+            ;;
+    esac
+    #-------------END OF CALCULATOR-------------#
 
     #-------------EXIT-------------#
     elif [ "$pilih" = 7 ]
@@ -200,6 +294,7 @@ do
         clear
         echo "Thanks!"
         exit
+    #-------------END OF EXIT-------------#
         
     #-------------NO OPTION (MAIN MENU)-------------#
     else
@@ -228,6 +323,7 @@ do
         esac
         
     fi
-    
+
+    #-------------END OF ALL-------------#
 done
 
