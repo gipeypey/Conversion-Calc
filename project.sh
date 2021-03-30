@@ -111,7 +111,8 @@ do
             #-------------BACK (ERROR)-------------#
             elif [ "$celcius" = 3 ]
             then
-                reload
+                clear
+                menu_temperature
                 
             #-------------NO OPTION (MENU CELCIUS)-------------#
             else
@@ -144,7 +145,8 @@ do
             #-------------BACK (ERROR)-------------#
             elif [ "$fahrenheit" = 3 ]
             then
-                reload
+                clear
+                menu_temperature
                 
             #-------------NO OPTION (MENU FAHRENHEIT)-------------#
             else
@@ -177,7 +179,8 @@ do
             #-------------BACK (ERROR)-------------#
             elif [ "$kelvin" = 3 ]
             then
-                reload
+                clear
+                menu_temperature
                 
             #-------------NO OPTION (MENU KELVIN)-------------#
             else
@@ -188,9 +191,10 @@ do
             fi
             
         #-------------BACK (ERROR)-------------#
-        elif [ "$temprature" = 4 ]
+        elif [ "$temperature" = 4 ]
         then
-            x=0
+            clear
+            menu_temperature
             
         #-------------NO OPTION (MENU TEMPRATURE CONVERSION)-------------#
         else
