@@ -99,8 +99,9 @@ do
             then
                 clear
                 read -p "C = " c_to_f
-                echo "$c_to_f C = $[$[$c_to_f * 9]/5+32] F"
-                
+                echo -n "$c_to_f C = "
+				awk "BEGIN {print (9/5*$c_to_f)+32}"
+
             #-------------TO KELVIN-------------#
             elif [ "$celcius" = 2 ]
             then
