@@ -93,7 +93,7 @@ menu_length (){
     read -p "Input (1-4): " length
 }
 
-menu_Kilometer (){
+menu_kilometer (){
     echo "--KILOMETER (km) CONVERSION--"
     echo "1. To Meter"
     echo "2. To Foot"
@@ -101,7 +101,7 @@ menu_Kilometer (){
     read -p "Input (1-3): " kilometer
 }
 
-menu_Meter (){
+menu_meter (){
     echo "--METER (m) CONVERSION--"
     echo "1. To Kilometer"
     echo "2. To Foot"
@@ -109,7 +109,7 @@ menu_Meter (){
     read -p "Input (1-3): " meter
 }
 
-menu_Foot (){
+menu_foot (){
     echo "--FOOT (ft) CONVERSION--"
     echo "1. To Kilometer"
     echo "2. To Meter"
