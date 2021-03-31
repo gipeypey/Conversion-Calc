@@ -7,11 +7,10 @@ menu (){
     echo ""
     echo "1. Temprature"
     echo "2. Length"
-    echo "3. Weight"
-    echo "4. Time"
-    echo "5. Volume"
-    echo "6. Calculator"
-    echo "7. Exit"
+    echo "3. Time"
+    echo "4. Volume"
+    echo "5. Calculator"
+    echo "6. Exit"
     read -p "Input (1-7): " pilih
 }
 
@@ -322,7 +321,7 @@ do
 
 
     #-------------CALCULATOR-------------#
-    elif [ "$pilih" = 6 ]
+    elif [ "$pilih" = 5 ]
     then
         #-------------MENU_NUM-------------#
         clear
@@ -387,7 +386,7 @@ do
     #-------------END OF CALCULATOR-------------#
 
     #-------------EXIT-------------#
-    elif [ "$pilih" = 7 ]
+    elif [ "$pilih" = 6 ]
     then
         clear
         echo "Thanks!"
@@ -399,26 +398,26 @@ do
         clear
         echo "!!Invalid!!"
         sleep 2
-        echo " "
-        echo "Continue? (y/n) 2"
-        read answer
+        # echo " "
+        # echo "Continue? (y/n) 2"
+        # read answer
         
-        case "$answer" in
-            y)
-                echo "yes"
-                x=0
-            ;;
-            n)
-                clear
-                echo "Thanks!"
-                exit
-            ;;
-            *)
-                clear
-                echo "!!Invalid!!"
-                sleep 2
-            ;;
-        esac
+        # case "$answer" in
+        #     y)
+        #         echo "yes"
+        #         x=0
+        #     ;;
+        #     n)
+        #         clear
+        #         echo "Thanks!"
+        #         exit
+        #     ;;
+        #     *)
+        #         clear
+        #         echo "!!Invalid!!"
+        #         sleep 2
+        #     ;;
+        # esac
         
     fi
 
