@@ -52,3 +52,14 @@ menu_pesan (){
 
     done
 }
+
+
+
+
+
+
+
+
+
+#-------------TEMPAT RUNNING CODE-------------#
+menu
