@@ -350,8 +350,7 @@ menu_num(){
 #-------------CALL BACK 1 LAYER-------------#
 call_back (){
     echo " "
-    echo "Continue? (y/n) temperature"
-    read answer
+    read -p "Continue? [y/n]" answer 
         
     case "$answer" in
         y)
