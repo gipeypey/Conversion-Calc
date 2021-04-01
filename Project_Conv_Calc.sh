@@ -820,7 +820,8 @@ menu_calculator (){
                 ;;
             4)
                 clear
-                echo "The result of $num1 / $num2 is $[num1/num2]"
+                echo -n "The result of $num1 / $num2 is "
+                awk "BEGIN {print $num1 / $num2}"
                 sleep 2
                 ;;
             5)
