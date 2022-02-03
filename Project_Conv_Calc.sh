@@ -8,7 +8,7 @@ menu (){
     do
 
         clear
-        echo "--CONVERSION CALCULATOR 2022--"
+        echo "--CONVERSION CALCULATOR 2021--"
         echo "--Choose what you need!--"
         echo ""
         echo "1. Temperature"
